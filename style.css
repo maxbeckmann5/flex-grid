@@ -16,13 +16,9 @@ body, html{
 .page{
     width: 100%;
     display: grid;
-    grid-template-rows: 7rem 50vh 20rem;
+    grid-template-rows: 7rem 50vh 35vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "header header header color color" "inhalt inhalt . . ." "zitat zitat zitat zitat img";
-}
-.header-color{
-    grid-area: color;
-    background-color: #ff6e48;
+    grid-template-areas: "header header header header header" "inhalt inhalt . bild ." "img col zitat zitat col2";
 }
 .page header{
     grid-area: header;
@@ -31,12 +27,19 @@ body, html{
     align-items: center;
     justify-content: space-between;
 }
-.page header h1{
+.page header .logo{
     display: inline-block;
     width: auto;
     padding: 0;
     margin: 0 0 0 3rem;
-    color: #fff;
+}
+.search{
+    background-color: rgba(255, 255, 255, 0.593);
+    height: 5vh;
+    width: 100vh;
+    border: none;
+    color: white;
+    border-radius: 5px;
 }
 .page header nav{
     font-size: 1.6rem;
@@ -61,25 +64,46 @@ body, html{
     font-size: 1.6rem;
     color: #fff;
 }
-.text{
+.img-shop-box{
+    grid-area: bild;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+}
+.img-shop{
+    height: 40vh;
+    width: 40vh;
+}
+.text{
     grid-area: zitat;
     background-color: var(--prime);
 }
-.text .text-inhalt{
-    margin: 0;
-    padding: 0;
-    font-size: 2.2rem;
+.text-inhalt{
+    margin: 5vh 0 0 10vh;
+}
+.text h2{
+    font-size: 2rem;
+    color: #fff;
+}
+.text p{
+    font-size: 1.6rem;
     color:#fff;
-    text-align: center;
-    width: 80%;
-    display: inline-block;
 }
 .location{
     grid-area: img;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.location-img{
+    height: 35vh;
+    width: 40vh;
+}
+.text-color{
+    grid-area: col;
+    background-color: #ff6e48;
+}
+.text-color2{
+    grid-area: col2;
+    background-color: #ff6e48;
 }
